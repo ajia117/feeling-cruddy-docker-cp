@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Cruddy-feeling server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "server",
+    "cruddy"
+  ],
+  "author": "Kerim and Andre",
+  "license": "MIT"
+}
