@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://postgres:docker@172.17.0.2/cruddy'
+    connection: 'postgres://postgres:docker@postgres/cruddy'
   },
 
   // development: {

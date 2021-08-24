@@ -1,9 +1,11 @@
 const express = require('express');
 const knex = require('knex')(require('./knexfile.js')['development'])
+const cors = require('cors');
 
 const app = express();
 var PORT = 8080;
-
+app.use(express.json());
+app.use(cors())
 
 app.listen(PORT, function(err){
   if (err) console.log("Error in server setup")

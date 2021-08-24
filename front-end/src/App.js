@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
 
 function App() {
+  const [appState, setAppState] = React.useState([])
+
+  useEffect(() => {
+    fetch("http://cruddy-server:8080/")
+    .then(res => res.json())
+    .then((data)=> {
+      setAppState(data)
+      console.log(data)
+    })
+    .catch(err => console.log(err))
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div><p>{JSON.stringify(appState)}</p></div>
+  )
 }
 
 export default App;
