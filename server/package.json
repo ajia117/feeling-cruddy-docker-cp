@@ -1,9 +1,11 @@
 {
   "name": "server",
+  "type": "module",
   "version": "1.0.0",
   "description": "Cruddy-feeling server.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "test"
   },
   "keywords": [
@@ -11,5 +13,10 @@
     "cruddy"
   ],
   "author": "Kerim and Andre",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.95.10",
+    "pg": "^8.7.1"
+  }
 }
