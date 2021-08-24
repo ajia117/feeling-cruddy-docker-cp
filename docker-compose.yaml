@@ -28,4 +28,4 @@ services:
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: cruddy
     volumes:
-      - ./server/db:/var/lib/postgresql/data
+      - ./db:/var/lib/postgresql/data

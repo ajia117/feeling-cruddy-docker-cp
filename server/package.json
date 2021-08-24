@@ -1,11 +1,10 @@
 {
   "name": "server",
-  "type": "module",
   "version": "1.0.0",
   "description": "Cruddy-feeling server.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npx knex migrate:rollback && npx knex migrate:latest && npx knex seed:run && node index.js",
     "test": "test"
   },
   "keywords": [
